@@ -8,10 +8,12 @@ default: &default
 
 development:
   <<: *default
+  template: template0
   database: membersonly_development
 
 test:
   <<: *default
+  template: template0
   database: membersonly_test
 
 production:
