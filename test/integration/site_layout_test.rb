@@ -1,6 +1,7 @@
 require 'test_helper'
 
 class SiteLayoutTestTest < ActionDispatch::IntegrationTest
+  
   test "layout links" do
     get root_path
     assert_template 'static_pages/home'
@@ -29,7 +30,6 @@ class SiteLayoutTestTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", logout_path, 0
     assert_select "a[href=?]", user_path(user), 0
     assert_select "a[href=?]", edit_user_path(user), 0
-    
     
   end
 end

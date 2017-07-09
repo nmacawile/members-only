@@ -1,0 +1,28 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  content: The quick brown fox jumps over the lazy dog.
+  created_at: <%= 2.days.ago %>
+  user: one
+
+two:
+  content: Peter piper picked a peck of pickle pepper.
+  created_at: <%= 3.days.ago %>
+  user: two
+  
+most_recent:
+  content: Hello, world!
+  user: one
+  created_at: <%= Time.zone.now %>
+  
+three:
+  content: Old McDonald had a farm.
+  created_at: <%= 1.week.ago %>
+  user: two
+  
+<% 100.times do |n| %>
+post<%= n %>:
+  content: <%= "a" * 40 %>
+  created_at: <%= 1.week.ago %>
+  user: one
+<% end %>
